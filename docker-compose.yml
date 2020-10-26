@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  teamcity-agent:
+    image: jetbrains/teamcity-agent:2020.1.5-linux-sudo
+    container_name: "teamcity-lightbike-agent"
+    environment:
+      - SERVER_URL=https://teamcity.unexpectedeof.xyz
+      - AGENT_NAME=lightbike
+      - DOCKER_IN_DOCKER=start
+    restart: on-failure
+    volumes:
+      - /home/n0mn0m/agent-tools:/usr/local/bin
+      - teamcity-agent:/data/teamcity_agent/conf
+    privileged: true
+
+volumes:
+  teamcity-agent:
+      external: true
