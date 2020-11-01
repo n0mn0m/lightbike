@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install wget
+sudo apt-get install -y wget build-essential llvm* clang*
 sudo wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update; \
