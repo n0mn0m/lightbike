@@ -9,5 +9,5 @@ sudo apt-get update; \
 sudo wget https://dl.min.io/client/mc/release/linux-amd64/mc
 sudo chmod +x mc
 sudo mv mc /usr/bin/
-mc alias set minio https://minio.unexpectedeof.xyz access secret --api S3v4
+mc alias set minio https://minio.burningdaylight.io access secret --api S3v4
 curl https://sh.rustup.rs -sSf | sh
